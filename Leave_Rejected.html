@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- New code started here -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+	<!-- New code ended here -->
+
+	<style type="text/css">
+		body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+			font-family:calibri;
+		}
+		td{
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 30px;
+			text-align: center;
+			color: #333;
+			padding: 5px 8px !important;
+		}
+		th {
+			background: #d9dbe6;
+			padding: 5px 11px !important;
+			text-align: center;
+		}
+        
+        .table1 td:first-child{
+			font-weight:bold;
+		}
+
+        .tr_white{
+            background: #ffffff;
+            color: #000;
+            padding: 10px 0px;
+        }
+        table {
+            border-collapse: collapse !important;
+        }
+		.add_td_left{
+			width:30%;
+			float: left;
+		}
+		.add_td_right{
+			width:60%;
+			float: left;
+		}
+		.add_td_middle{
+			width:10%;
+		}
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+		.table-bordered td, th{
+			border: 1px solid #c6c1c1 !important;
+		}
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        div[style*="margin: 16px 0;"] {
+            margin: 0 !important;
+        }
+		
+		.left_data {
+			font-family: calibri;
+			font-size: 16px;
+			line-height: 22px;
+			color: #333;
+		}
+		.bold-font{
+			font-weight:bold;
+		}
+		.txt_leave_intimation{
+				color: #ffffff;
+				font-size: 18px;
+				font-weight: 600;
+				text-align: center;
+				padding: 10px 0px 10px;
+		}
+		
+		.fa {
+		padding: 4px 2px;
+		font-size: 22px;
+		width: 30px;
+		text-align: center;
+		text-decoration: none;
+		margin: 5px 2px;
+		}
+		.white_bg{
+			background:#eeeeee; 
+		}
+		.address_right_data{
+			padding-left: 0px;
+		}
+		.fa:hover {
+			opacity: 0.7;
+		}
+		.dot_pl{
+			padding-left: 20px;
+		}
+		span#lbl_Prfl_TAdd {
+			padding-left: 18px;
+		}
+		.td_data{
+			font-size: 15px;
+			font-weight: 600;
+			margin: 0;
+			line-height: 20px;
+			color: #2f2f2f;
+		}
+		.td_address {
+			text-align: left;
+			white-space: normal;
+			padding-left: 22px !important;
+		}
+		.address_pb{
+			padding-bottom: 15px;
+		}
+		.div_left{
+			width: 25%;
+		    float: left;
+			padding-left:10px;
+			background: #eeeeee;
+			line-height: 33px;
+		}
+		.section_pt{
+			padding-top: 15px;
+		}
+		.div_right{
+			width: 75%;
+			background: #eeeeee;
+			float: left;
+			padding-right:10px;
+			line-height: 33px;
+		}
+		.leave_instance_left{
+			width:40%;
+		}
+		.leave_instance_middle{
+			width:10%;
+		}
+		.leave_instance_right{
+			width: 50%;
+		}
+
+	
+		.left_td{
+			width:48%;
+			float: left;
+			padding:15px 23px 0px 14px;
+		}
+		.right_td{
+			width: 52%;
+			float: left;
+			padding:15px 3px 0px 23px;
+		}
+		
+		.tbl_container{
+			display: block;
+			width: 100%;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+			padding: 0px 23px;
+		}
+		.tbl_container th, td{
+			white-space: nowrap;
+		}
+	
+		.order_container{
+			font-family: calibri;
+			font-weight: 400;
+			border: 1px solid #eeeeee;
+			background: #e9f0f14d;
+		}
+		
+		
+		.tbl_body{
+		    margin: 20px 0px!important;
+		    padding: 0 !important;
+		    background-color: #e1e1e1;
+		}
+		
+		.mt_15{
+			margin-top: 15px;
+		}
+		
+		.welcome_patient{
+			background-color: #ffffff; 
+		}
+		.txt_patient {
+			font-family: Open Sans, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 24px;
+			padding: 13px 0px 7px 21px;
+			text-align: left;
+		}
+		
+		.txt_thanks{
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 36px;
+			color: #777777;
+			margin: 0;
+			text-align: left;
+		}
+		.tbl_header {
+			font-family: Open Sans, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 24px;
+			padding: 10px;
+			color: #3d5ca3;
+			text-align: center;
+		}
+		
+		.txt_thanks_container{
+			text-align: left;
+    		padding-left: 22px;
+			padding-bottom: 13px;
+		}
+		
+	    .pt_20{
+		padding-top: 20px;
+		}
+		
+	    .span_pb{
+			padding-bottom: 0px;
+		}
+		
+		.wel_max_width{
+			max-width:700px;
+		}
+	
+		.top_header{
+		font-size:16px; 
+		background:#2d78b8;  
+		}
+		
+	   .top_tbl_max_width{
+		max-width:750px;
+		}
+		
+	    .top_lr_radius{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+		
+		.txt_training_name{
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 24px;
+		color: #777777;
+		}
+		
+		.txt_training_name_new {
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 24px;
+			color: #333;
+		}
+
+		.txt_training_name_new a{
+			color:#777777;
+			text-decoration:none;
+		}
+		
+		.txt_training_name_new a:hover{
+			color:#2674d2;
+		}
+		
+		@media screen and (max-width:767px){
+			.welcome_patient {
+				padding: 15px 15px 15px 15px;
+			}
+			.txt_leave_intimation{
+				font-size: 13px;
+				padding: 5px 10px 5px;
+			}
+			.left_td{
+				width: 100%;
+				padding: 15px 23px 0px 5px;
+			}
+			.right_td{
+				width: 100%;
+				padding: 3px 23px 2px 5px;
+			}
+			.leave_instance_left{
+					width:58%;
+				}
+				.leave_instance_middle{
+					width:5%;
+				}
+				.leave_instance_right{
+					width: 37%;
+				}
+				.div_left{
+					width: 100%;
+					display: block;
+				}
+				.div_right{
+					width: 100%;
+				    display: block;
+				}
+				.dot_pl {
+					padding-left: 12px;
+				}
+				.address_right_data{
+					padding-left: 30px;
+				}
+				.address_pb{
+					padding-bottom: 0px;
+				}
+				span#lbl_Prfl_TAdd {
+					padding-left: 10px;
+				}
+				.txt_thanks_container{
+					padding-left: 12px;
+				}
+				.td_address{
+					padding-left: 14px !important;
+				}
+				.tbl_container{
+					padding:0px 15px;
+				}
+				.txt_patient {
+					padding: 13px 0px 7px 12px;
+				}
+				.tbl_body{
+					margin: 0px 0px!important;
+				}
+				.container{
+					padding: 5px !important;
+				}
+				.section_pt{
+					padding-top: 5px;
+				}
+			}
+	</style>
+
+<body class="tbl_body">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2 col-md-2">
+				
+			</div>
+			<div class="col-sm-8 col-md-8">
+				<div class="txt_leave_intimation top_header top_lr_radius" style="text-transform: uppercase;">
+					Ms Komal Suryavanshi (3112E) (Praful) - IT STAFF- 9082760630
+				</div>
+				<div class="txt_patient white_bg">
+					Dear Komal Suryavanshi,
+				</div>
+				<div class="txt_training_name_new white_bg txt_thanks_container">
+					I have rejected your leave application as per reason mentioned below.
+				</div>
+			
+			</div>
+			<div class="col-sm-2 col-md-2">
+				
+			</div>
+		</div>
+
+		<div class="row section_pt">
+			<div class="col-sm-2 col-md-2">
+				
+			</div>
+			<div class="col-sm-8 col-md-8">
+					<tr class="">
+							<td>
+								<div class="left_td white_bg">
+									<table cellspacing="0" cellpadding="0" border="0" width="100%">
+										<tr>
+											<td width="40%" align="left" class="left_data" style="text-align: left; font-weight: 600;"> DOJ</td>
+											<td width="10%" align="left" class="left_data">:</td>
+											<td width="50%" align="left" class="left_data" style="text-align: left;"> 24-05-2021</td>
+										</tr>
+									
+										<tr>
+											<td width="40%" align="left" class="left_data" style="text-align: left; font-weight: 600;"> Leave Counts</td>
+											<td width="10%" align="left" class="left_data">:</td>
+											<td width="50%" align="left" class="left_data" style="text-align: left;"> 2</td>
+										</tr>
+										<!-- <tr><td height="5"></td></tr> -->
+									</table>
+								</div>
+								<div class="right_td white_bg">
+									<table cellspacing="0" cellpadding="0" border="0" width="100%">
+										<tr>
+											<td width="40%" align="left" class="left_data" style="text-align: left; font-weight: 600;"> Week Off</td>
+											<td width="10%" align="left" class="left_data">:</td>
+											<td width="50%" align="left" class="left_data" style="text-align: left;">Sunday</td>
+										</tr>
+										
+										<tr>
+											<td align="left" class="left_data leave_instance_left" style="text-align: left; font-weight: 600;"> Leave Instances L365</td>
+											<td align="left" class="left_data leave_instance_middle">:</td>
+											<td align="left" class="left_data leave_instance_right" style="text-align: left;"> 2</td>
+										</tr>
+										<!-- <tr><td height="5"></td></tr> -->
+									</table>
+								</div>
+							</td>
+					</tr>
+
+					<tr>
+						<td class="">
+							<div class="white_bg">
+                                <table width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td width="100%" class="td_address"><span style="font-weight: 600;">Present Address<span class="dot_pl">:</span></span>
+                                                <span id="lbl_Prfl_TAdd">R.NO.B-2/2, Gajanan CHS, SEC 23, Plot No. 276, Juinagar, Navi Mumbai </span>
+                                            </td>
+                                        </tr>  
+                                        <tr>
+                                            <td width="100%" class="td_address" style="padding-bottom: 18px !important;"><span style="font-weight: 600;">Permanent Address<span class="dot_pl">:</span></span>
+                                            <span id="lbl_Prfl_TAdd">R.NO.B-2/2, Gajanan CHS, SEC 23, Plot No. 276, Juinagar, Navi Mumbai </span>
+                                        </td>
+                                    </tr>                                            
+                                    </tbody>
+                                </table>
+						    </div>
+						</td>
+					</tr>
+
+
+			</div>
+			<div class="col-sm-2 col-md-2">
+				
+			</div>
+		</div>
+
+		<div class="row section_pt">
+			<div class="col-sm-2 col-md-2">
+				
+			</div>
+			<div class="col-sm-8 col-md-8">
+				<div class="white_bg">
+					<div class="tbl_header">
+						Applied For
+					</div>
+					<div class="tbl_container">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Sr. No.</th>
+									<th>No. of Days</th>
+									<th>From Date</th>
+									<th>To Date</th>
+                                    <th>Reason</th>
+									<th>Rejection Remarks</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>One Day</td>
+									<td>01-09-2021</td>
+									<td>24-11-2021</td>
+									<td>Personal reason ~ Test entry</td>
+									<td>Test entry from live</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+
+					<div class="tbl_header">
+						Available Leaves
+					</div>
+					<div class="tbl_container">
+						<table class="table table-bordered table1">
+							<thead>
+								<tr>
+									<th>Leaves</th>
+									<th>Balance</th>
+									<th>M1</th>
+									<th>M2</th>
+									<th>M3</th>
+									<th>Q2</th>
+									<th>Y1</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>CL</td>
+									<td>2.5</td>
+									<td>4</td>
+									<td>0.5</td>
+									<td>0</td>
+									<td>0</td>
+									<td>4.5</td>
+								</tr>
+								<tr>
+									<td>SL</td>
+									<td>1</td>
+									<td>4</td>
+									<td>0.5</td>
+									<td>0</td>
+									<td>0</td>
+									<td>4.5</td>
+								</tr>
+								<tr>
+									<td>EL</td>
+									<td>2</td>
+									<td>4</td>
+									<td>0.5</td>
+									<td>0</td>
+									<td>0</td>
+									<td>4.5</td>
+								</tr>
+								<tr>
+									<td>Total</td>
+									<td>5.5</td>
+									<td>4</td>
+									<td>0.5</td>
+									<td>0</td>
+									<td>0</td>
+									<td>4.5</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2 col-md-2">
+				
+			</div>
+		</div>
+
+		<div class="row section_pt">
+			<div class="col-sm-2 col-md-2">
+				
+			</div>
+			<div class="col-sm-8 col-md-8">
+				<div class="white_bg">
+					<div class="tbl_header">
+						Previous Leave Availed Records
+					</div>
+					<div class="tbl_container">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>SNo</th>
+									<th>Date</th>
+									<th>Reason</th>
+									<th>Days</th>
+									<th>Leave Type</th>
+									<th>From Date</th>
+									<th>To Date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>28-10-2021</td>
+									<td>Personal Issue</td>
+									<td>1 Day</td>
+									<td>CL</td>
+									<td>29-10-2021</td>
+									<td>29-10-2021</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>28-10-2021</td>
+									<td>Personal Issue</td>
+									<td>1 Day</td>
+									<td>SL</td>
+									<td>29-10-2021</td>
+									<td>29-10-2021</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>28-10-2021</td>
+									<td>Personal Issue</td>
+									<td>1 Day</td>
+									<td>CL</td>
+									<td>29-10-2021</td>
+									<td>29-10-2021</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2 col-md-2">
+				
+			</div>
+		</div>
+
+		<div class="row section_pt">
+			<div class="col-sm-2 col-md-2">
+				
+			</div>
+			<div class="col-sm-8 col-md-8">
+				<div class="white_bg">
+					<div class="txt_patient">
+						Regards,
+					</div>
+					<div class="txt_thanks_container"> 
+						<p class="txt_training_name_new" style="margin: 12px 0px 0px 0px;">
+							Mr Prafulla Sahoo
+						</p>
+						<p class="txt_training_name_new" style="margin: 0px;">
+							Sr Officer | IT Staff
+						</p>
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-sm-2 col-md-2">
+				
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+ 
+            </td>
+        </tr>
+    </table>
+
+
+	
+	  
+</body>
+
+</html>
